@@ -6,7 +6,7 @@ This repository contains an implementation of an N-Gram language model for word 
 
 The given dataset was first edited to create a word and character-based n-gram language model. Unnecessary characters, punctuation, numbers, and other such elements were removed from the dataset. A stopword.txt file was created, and commonly used irrelevant words were added to it during its creation.
 
-![](1)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/1.jpg)
 
 The word-based n-gram model was built by individually separating all the words in the dataset and then splitting them into n-grams. For example, to create the 2-gram model, a pair was created for every three consecutive words.
 
@@ -16,10 +16,10 @@ To calculate the word- or character-based n-gram models, the number of n-gram pa
 
 Subsequently, the word or words with the highest frequency were calculated to predict the word that comes after a specific word. The graphs below illustrate the top 10 most frequently used words following "hukuk" and "kasten."
 
-![](2)
-![](3)
-![](4)
-![](5)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/2.jpg)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/3.jpg)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/4.jpg)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/5.jpg)
 
 ## Library
 
@@ -51,7 +51,7 @@ Pickle is used to save the ngram_models dictionary as a binary file with the ext
 
 It have prepared a menu for the n-gram language model.
 
-![](6)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/6.jpg)
 
 ### 1. N-Gram Word
 
@@ -63,6 +63,10 @@ The function converts the text to lowercase and tokenizes it using the RegexpTok
 
 To use this function, it should be called it with a text string, an integer value n indicating the desired N-Gram size (e.g. 2 for bigrams, 3 for trigrams), and a list of stopWords that should be ignored in the N-Gram calculations. The function would then return a dictionary containing the N-Gram words and their frequencies in the input text.
 
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/7.jpg)
+
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/8.jpg)
+
 ### 2. Most Common Character Sets
 
 #### def NGramPhase(text, n):
@@ -71,8 +75,8 @@ The purpose of this function is to determine the frequency of occurrence of char
 
 The function eventually returns a dictionary of N-Gram characters in the input text and their frequencies, sorted by frequency in ascending order. It was added the part of it because the output is too long.
 
-![](7)
-![](8)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/9.jpg)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/10.jpg)
 
 ### 3. Complete to the most frequently repeated Word
 
@@ -80,7 +84,7 @@ The function eventually returns a dictionary of N-Gram characters in the input t
 
 This function aims to find the word in the input text that starts with the same characters as the targetWord parameter and has the highest frequency. This way function can predict how the word will continue.
 
-![](9)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/11.jpg)
 
 ### 4. Complete Next Word
 
@@ -88,7 +92,7 @@ This function aims to find the word in the input text that starts with the same 
 
 It was used the function that used in “1 .N-Gram Word” here as well. It was used the word with the highest frequency to predict the next word after the word it was received with the input.
 
-![](10)
+![](https://github.com/beyzanc/n-gram-language-modeling/blob/main/img/12.jpg)
 
 ### 5. Train set
 
